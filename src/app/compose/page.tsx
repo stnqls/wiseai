@@ -9,33 +9,47 @@ import Textarea from "@/_components/Textarea/Textarea";
 // 작성 완료 후 피드에 새 게시물 반영
 
 import { ChangeEvent, useCallback, useState } from "react";
+import Button from "@/_components/Button/Button";
+import { pathUrls } from "@/_routes/path";
+import ArrowLeftIcon from "@/assets/icons/arrow_left.svg";
+import Link from "next/link";
 
 export default function ComposePage() {
   const [text, setText] = useState("");
 
   const onChangeText = useCallback((e: ChangeEvent<HTMLTextAreaElement>) => {
     const { value } = e.target;
-    if (value.length > 280) {
-      return;
-    }
     setText(value);
   }, []);
 
   return (
-    <div className="flex flex-col gap-12">
-      <div className="flex flex-col gap-4">
-        <Textarea
-          placeholder="What's happening?"
-          value={text}
-          onChange={onChangeText}
-          className="h-250"
-        />
-        <span className="self-end text-gray-500 text-12 px-12">
-          {text.length}/280
-        </span>
-      </div>
+    <main className="h-full">
+      <form className="pc:max-w-600 pc:mx-auto">
+        <div className="sticky top-0 left-0 bg-white h-53 flex items-center justify-between px-16">
+          <Link href={pathUrls.home}>
+            <ArrowLeftIcon className="w-24 h-24" />
+          </Link>
+          <Button variant="blue" size={36} className="w-80" disabled={!text}>
+            Post
+          </Button>
+        </div>
+        <div className="p-16 flex flex-col gap-12">
+          <div className="flex flex-col gap-4">
+            <Textarea
+              placeholder="What's happening?"
+              value={text}
+              maxLength={280}
+              onChange={onChangeText}
+              className="h-250"
+            />
+            <span className="self-end text-gray-500 text-12 px-12">
+              {text.length}/280
+            </span>
+          </div>
 
-      <ImageAttachment />
-    </div>
+          <ImageAttachment multiple />
+        </div>
+      </form>
+    </main>
   );
 }
