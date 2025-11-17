@@ -1,18 +1,9 @@
-// 무한 스크롤 또는 페이지네이션으로 게시물 목록 표시
-
-import { getPostListData } from "@/_features/post/apis/getPostListData";
-import PostCard from "@/_features/post/components/PostCard";
+import { getPostListApi } from "@/_features/post/apis/getPostList.api";
+import PostList from "@/_features/post/components/PostList";
 
 export default async function Home() {
-  const postList = await getPostListData({ page: 1, limit: 10 });
+  const limit = 10;
+  const postList = await getPostListApi({ page: 1, limit });
 
-  const onToggleLike = () => {};
-
-  return (
-    <div>
-      {postList.map((post) => (
-        <PostCard key={post.id} {...post} onToggleLike={onToggleLike} />
-      ))}
-    </div>
-  );
+  return <PostList postList={postList} limit={limit} />;
 }

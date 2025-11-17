@@ -1,6 +1,6 @@
 import postListData from "@/_data/posts.data.json";
 
-export const getPostListData = async ({
+export const getPostListApi = async ({
   page,
   limit,
 }: {

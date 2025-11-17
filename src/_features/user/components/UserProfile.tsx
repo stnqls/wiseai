@@ -9,7 +9,7 @@ interface UserProfileProps {
   className?: string;
 }
 
-export default async function UserProfile({
+export default function UserProfile({
   src,
   alt,
   width,

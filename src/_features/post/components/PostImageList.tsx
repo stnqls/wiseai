@@ -27,8 +27,6 @@ export default function PostImageList({ images }: PostImageListProps) {
     ).then(setImageSizes);
   }, [images]);
 
-  console.log(imageSizes);
-
   if (images.length === 1 && imageSizes[0]) {
     const { width, height } = imageSizes[0];
     return (

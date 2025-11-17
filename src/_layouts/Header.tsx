@@ -9,10 +9,28 @@ export default async function Header() {
   const user = await getUserData();
 
   return (
-    <header className="sticky top-0 left-0 h-full bg-white grow border-r-1 border-r-gray-200 pb-46 pt-24 px-24 flex justify-end">
-      <div className="flex flex-col justify-between h-full w-100 pc:w-180">
-        <nav className="flex flex-col gap-12 items-center w-full">
-          <span className="text-28 font-bold pc:px-24">WiseAI</span>
+    <header
+      className={`
+     bg-white pt-12 px-12 pb-12 flex border-t-1 border-gray-300
+    tablet:px-24 tablet:justify-end tablet:h-full tablet:pb-46 tablet:border-t-0 tablet:border-r-1 tablet:border-r-gray-200 tablet:grow
+    `}
+    >
+      <div
+        className={`
+        flex justify-between w-full gap-24
+        tablet:flex-col tablet:w-100 tablet:h-full tablet:items-center
+        pc:w-180
+        `}
+      >
+        <nav
+          className={`
+          flex gap-12 items-center justify-between flex-1
+          tablet:flex-col tablet:justify-start tablet:w-full
+          `}
+        >
+          <span className="text-18 tablet:text-28 font-bold tablet:px-24">
+            WiseAI
+          </span>
 
           <NavLink
             href={pathUrls.home}
@@ -30,6 +48,7 @@ export default async function Header() {
           alt={user.name}
           width={50}
           height={56}
+          className="mx-0"
         />
       </div>
     </header>

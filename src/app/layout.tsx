@@ -1,3 +1,4 @@
+import Providers from "@/_components/Providers";
 import "../_styles/globals.css";
 
 import type { Metadata } from "next";
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="h-dvh">{children}</body>
+      <body className="h-dvh">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

@@ -23,6 +23,7 @@ const config: Config = {
     },
     screens: {
       pc: "1024px",
+      tablet: "768px",
     },
   },
 };
