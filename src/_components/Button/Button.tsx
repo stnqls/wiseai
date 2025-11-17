@@ -6,12 +6,13 @@ const buttonVariants = cva(
   `
   rounded-8 w-full whitespace-nowrap
   disabled:bg-gray-100 disabled:text-gray-500 
-  focus:outline-solid focus:outline-1 focus:outline-gray-800
+  focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
     `,
   {
     variants: {
       variant: {
         gray: "bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-700",
+        blue: "bg-blue-500 text-white hover:bg-blue-600 hover:text-white",
       },
       size: {
         48: `h-48 font-b-14sb px-24`,
