@@ -9,7 +9,7 @@ export default async function Header() {
   const user = await getUserData();
 
   return (
-    <header className="h-full bg-white flex-1 border-r-1 border-r-gray-200 pb-46 pt-24 px-24 flex justify-end">
+    <header className="sticky top-0 left-0 h-full bg-white grow border-r-1 border-r-gray-200 pb-46 pt-24 px-24 flex justify-end">
       <div className="flex flex-col justify-between h-full w-100 pc:w-180">
         <nav className="flex flex-col gap-12 items-center w-full">
           <span className="text-28 font-bold pc:px-24">WiseAI</span>

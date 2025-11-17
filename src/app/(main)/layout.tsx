@@ -8,7 +8,7 @@ export default function MainLayout({
   return (
     <div className="flex h-full">
       <Header />
-      <div className="flex-2 shrink-0">{children}</div>
+      <div className="flex-grow-2 overflow-y-auto">{children}</div>
     </div>
   );
 }
