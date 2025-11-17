@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "author": {
+      "name": "김개발",
+      "username": "kimdev",
+      "profileImage": "https://picsum.photos/40/40?random=1",
+      "verified": true
+    },
+    "content": "오늘 React 18의 새로운 기능들을 공부했습니다! Concurrent Features가 정말 흥미롭네요 🚀 #React #개발자",
+    "images": ["https://picsum.photos/500/300?random=1"],
+    "createdAt": "2024-01-15T10:30:00Z",
+    "likes": 42,
+    "retweets": 12,
+    "comments": 8,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 2,
+    "author": {
+      "name": "이디자인",
+      "username": "leedesign",
+      "profileImage": "https://picsum.photos/40/40?random=2",
+      "verified": false
+    },
+    "content": "새로운 디자인 시스템을 만들고 있어요. 일관성 있는 컴포넌트 라이브러리의 중요성을 다시 한번 느낍니다 ✨",
+    "images": [],
+    "createdAt": "2024-01-15T09:15:00Z",
+    "likes": 28,
+    "retweets": 5,
+    "comments": 3,
+    "isLiked": true,
+    "isRetweeted": false
+  }
+]
