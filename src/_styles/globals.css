@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@config "../../tailwind.config.ts";
+
+* {
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+svg,
+img {
+  flex-shrink: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
