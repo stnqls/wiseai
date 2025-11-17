@@ -5,7 +5,7 @@
       "name": "박프론트",
       "username": "frontpark",
       "profileImage": "https://picsum.photos/40/40?random=1",
-      "verified": false
+      "verified": true
     },
     "content": "Next.js 14 실험 기능을 적용해봤는데 성능이 확실히 좋아졌어요!",
     "images": [
@@ -15,7 +15,7 @@
       "https://picsum.photos/500/300?random=28",
       "https://picsum.photos/500/300?random=29"
     ],
-    "createdAt": "2024-01-05T11:23:00Z",
+    "createdAt": "2025-11-18T11:23:00Z",
     "likes": 58,
     "retweets": 19,
     "comments": 7,

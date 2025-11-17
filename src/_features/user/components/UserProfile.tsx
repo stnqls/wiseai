@@ -1,16 +1,28 @@
 import Image from "next/image";
-import { getUserData } from "../apis/getUserData";
+import { cn } from "@/_lib/cn";
 
-export default async function UserProfile() {
-  const user = await getUserData();
+interface UserProfileProps {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className?: string;
+}
 
+export default async function UserProfile({
+  src,
+  alt,
+  width,
+  height,
+  className,
+}: UserProfileProps) {
   return (
     <Image
-      src={user.profileImage}
-      alt={user.name}
-      width={50}
-      height={56}
-      className="rounded-full overflow-hidden mx-auto"
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={cn("rounded-full overflow-hidden mx-auto", className)}
     />
   );
 }
