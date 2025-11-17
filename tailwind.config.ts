@@ -23,7 +23,7 @@ const config: Config = {
     },
     screens: {
       mo: "768px",
-      pc: "1440px",
+      pc: "1024px",
     },
   },
 };
