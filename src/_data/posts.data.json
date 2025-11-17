@@ -8,7 +8,13 @@
       "verified": false
     },
     "content": "Next.js 14 실험 기능을 적용해봤는데 성능이 확실히 좋아졌어요!",
-    "images": ["https://picsum.photos/500/300?random=1"],
+    "images": [
+      "https://picsum.photos/500/300?random=1",
+      "https://picsum.photos/500/300?random=26",
+      "https://picsum.photos/500/300?random=27",
+      "https://picsum.photos/500/300?random=28",
+      "https://picsum.photos/500/300?random=29"
+    ],
     "createdAt": "2024-01-05T11:23:00Z",
     "likes": 58,
     "retweets": 19,

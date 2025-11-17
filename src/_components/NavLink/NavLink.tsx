@@ -16,13 +16,13 @@ interface NavLinkProps {
 const navLinkVariants = cva(
   `
   flex gap-6 w-50 h-56 pc:w-fit pc:h-50 justify-center pc:justify-start items-center pc:px-24 
-[&_svg]:text-gray-500
-hover:bg-gray-100 hover:rounded-full hover:[&_svg]:text-black
+ text-gray-500
+hover:bg-gray-100 hover:rounded-full hover:text-black
     `,
   {
     variants: {
       isActive: {
-        true: `bg-gray-100 rounded-full [&_svg]:text-black`,
+        true: `bg-gray-100 rounded-full font-semibold text-black`,
         false: ``,
       },
     },
