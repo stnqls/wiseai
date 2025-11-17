@@ -15,7 +15,7 @@
       "https://picsum.photos/500/300?random=28",
       "https://picsum.photos/500/300?random=29"
     ],
-    "createdAt": "2025-11-18T11:23:00Z",
+    "createdAt": "2025-11-17T01:23:00Z",
     "likes": 58,
     "retweets": 19,
     "comments": 7,
@@ -31,8 +31,13 @@
       "verified": true
     },
     "content": "Figma 자동 레이아웃을 다시 공부 중입니다. UI/UX는 끝이 없네요!",
-    "images": [],
-    "createdAt": "2024-02-12T08:12:00Z",
+    "images": [
+      "https://picsum.photos/500/300?random=29",
+      "https://picsum.photos/500/300?random=30",
+      "https://picsum.photos/500/300?random=31",
+      "https://picsum.photos/500/300?random=32"
+    ],
+    "createdAt": "2025-10-12T08:12:00Z",
     "likes": 34,
     "retweets": 4,
     "comments": 2,
@@ -48,8 +53,8 @@
       "verified": false
     },
     "content": "TypeScript 타입 정리하다가 하루가 다 갔습니다 😢",
-    "images": ["https://picsum.photos/500/300?random=2"],
-    "createdAt": "2024-03-01T15:44:00Z",
+    "images": ["https://picsum.photos/400/800?random=2"],
+    "createdAt": "2025-11-15T15:44:00Z",
     "likes": 71,
     "retweets": 11,
     "comments": 5,
@@ -65,7 +70,10 @@
       "verified": true
     },
     "content": "React Server Components 실전 적용 후기 정리 중✍️",
-    "images": [],
+    "images": [
+      "https://picsum.photos/500/300?random=33",
+      "https://picsum.photos/500/300?random=34"
+    ],
     "createdAt": "2024-04-21T10:10:00Z",
     "likes": 45,
     "retweets": 9,
@@ -82,7 +90,11 @@
       "verified": false
     },
     "content": "새로운 컬러 팔레트 만들었는데 너무 마음에 들어요 🎨",
-    "images": ["https://picsum.photos/500/300?random=3"],
+    "images": [
+      "https://picsum.photos/500/300?random=3",
+      "https://picsum.photos/500/300?random=35",
+      "https://picsum.photos/500/300?random=36"
+    ],
     "createdAt": "2024-03-11T09:02:00Z",
     "likes": 90,
     "retweets": 31,

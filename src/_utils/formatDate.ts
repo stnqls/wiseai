@@ -24,6 +24,11 @@ export const getRelativeDate = (date: string) => {
     return `${now.diff(targetDate, "day")}일 전`;
   }
 
-  // 7일 이상
+  // 3개월 미만
+  if (now.diff(targetDate, "month") < 3) {
+    return `${now.diff(targetDate, "month")}개월 전`;
+  }
+
+  // 3개월 이상
   return targetDate.format("YYYY-MM-DD HH:mm");
 };
