@@ -22,7 +22,6 @@ const config: Config = {
       height: rangePx(2000),
     },
     screens: {
-      mo: "768px",
       pc: "1024px",
     },
   },
