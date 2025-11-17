@@ -14,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="h-dvh">
-        <main className="h-full">{children}</main>
-      </body>
+      <body className="h-dvh">{children}</body>
     </html>
   );
 }
