@@ -2,35 +2,857 @@
   {
     "id": 1,
     "author": {
-      "name": "김개발",
-      "username": "kimdev",
+      "name": "박프론트",
+      "username": "frontpark",
       "profileImage": "https://picsum.photos/40/40?random=1",
-      "verified": true
+      "verified": false
     },
-    "content": "오늘 React 18의 새로운 기능들을 공부했습니다! Concurrent Features가 정말 흥미롭네요 🚀 #React #개발자",
+    "content": "Next.js 14 실험 기능을 적용해봤는데 성능이 확실히 좋아졌어요!",
     "images": ["https://picsum.photos/500/300?random=1"],
-    "createdAt": "2024-01-15T10:30:00Z",
-    "likes": 42,
-    "retweets": 12,
-    "comments": 8,
+    "createdAt": "2024-01-05T11:23:00Z",
+    "likes": 58,
+    "retweets": 19,
+    "comments": 7,
     "isLiked": false,
-    "isRetweeted": false
+    "isRetweeted": true
   },
   {
     "id": 2,
     "author": {
-      "name": "이디자인",
-      "username": "leedesign",
+      "name": "최디자이너",
+      "username": "choidesign",
       "profileImage": "https://picsum.photos/40/40?random=2",
+      "verified": true
+    },
+    "content": "Figma 자동 레이아웃을 다시 공부 중입니다. UI/UX는 끝이 없네요!",
+    "images": [],
+    "createdAt": "2024-02-12T08:12:00Z",
+    "likes": 34,
+    "retweets": 4,
+    "comments": 2,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 3,
+    "author": {
+      "name": "홍코더",
+      "username": "hongcode",
+      "profileImage": "https://picsum.photos/40/40?random=3",
       "verified": false
     },
-    "content": "새로운 디자인 시스템을 만들고 있어요. 일관성 있는 컴포넌트 라이브러리의 중요성을 다시 한번 느낍니다 ✨",
+    "content": "TypeScript 타입 정리하다가 하루가 다 갔습니다 😢",
+    "images": ["https://picsum.photos/500/300?random=2"],
+    "createdAt": "2024-03-01T15:44:00Z",
+    "likes": 71,
+    "retweets": 11,
+    "comments": 5,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+  {
+    "id": 4,
+    "author": {
+      "name": "김데브",
+      "username": "kimdev",
+      "profileImage": "https://picsum.photos/40/40?random=4",
+      "verified": true
+    },
+    "content": "React Server Components 실전 적용 후기 정리 중✍️",
     "images": [],
-    "createdAt": "2024-01-15T09:15:00Z",
-    "likes": 28,
-    "retweets": 5,
+    "createdAt": "2024-04-21T10:10:00Z",
+    "likes": 45,
+    "retweets": 9,
+    "comments": 3,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 5,
+    "author": {
+      "name": "이디자인",
+      "username": "leedesign",
+      "profileImage": "https://picsum.photos/40/40?random=5",
+      "verified": false
+    },
+    "content": "새로운 컬러 팔레트 만들었는데 너무 마음에 들어요 🎨",
+    "images": ["https://picsum.photos/500/300?random=3"],
+    "createdAt": "2024-03-11T09:02:00Z",
+    "likes": 90,
+    "retweets": 31,
+    "comments": 15,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+  {
+    "id": 6,
+    "author": {
+      "name": "백엔드King",
+      "username": "backendking",
+      "profileImage": "https://picsum.photos/40/40?random=6",
+      "verified": false
+    },
+    "content": "API 최적화 중인데 캐싱 전략 정하는 게 쉽지 않네요.",
+    "images": [],
+    "createdAt": "2024-02-22T13:45:00Z",
+    "likes": 27,
+    "retweets": 3,
+    "comments": 1,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 7,
+    "author": {
+      "name": "코드몽",
+      "username": "codemong",
+      "profileImage": "https://picsum.photos/40/40?random=7",
+      "verified": true
+    },
+    "content": "오늘은 알고리즘 풀이를 5개나 했습니다 🔥",
+    "images": ["https://picsum.photos/500/300?random=4"],
+    "createdAt": "2024-02-01T08:12:00Z",
+    "likes": 61,
+    "retweets": 21,
+    "comments": 4,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 8,
+    "author": {
+      "name": "JS마스터",
+      "username": "jsmaster",
+      "profileImage": "https://picsum.photos/40/40?random=8",
+      "verified": false
+    },
+    "content": "JavaScript 이벤트 루프 설명하기 어렵지만 재밌어요!",
+    "images": [],
+    "createdAt": "2024-01-27T12:21:00Z",
+    "likes": 39,
+    "retweets": 8,
+    "comments": 1,
+    "isLiked": false,
+    "isRetweeted": true
+  },
+  {
+    "id": 9,
+    "author": {
+      "name": "UX곰",
+      "username": "uxbear",
+      "profileImage": "https://picsum.photos/40/40?random=9",
+      "verified": true
+    },
+    "content": "사용자 테스트를 진행했는데 중요한 인사이트가 많이 보였어요.",
+    "images": ["https://picsum.photos/500/300?random=5"],
+    "createdAt": "2024-05-05T17:22:00Z",
+    "likes": 52,
+    "retweets": 10,
+    "comments": 6,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+  {
+    "id": 10,
+    "author": {
+      "name": "노마드",
+      "username": "nomad",
+      "profileImage": "https://picsum.photos/40/40?random=10",
+      "verified": false
+    },
+    "content": "디지털 노마드를 꿈꾸며 오늘도 코드 한 줄 ✈️",
+    "images": ["https://picsum.photos/500/300?random=6"],
+    "createdAt": "2024-06-10T09:54:00Z",
+    "likes": 26,
+    "retweets": 6,
+    "comments": 0,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 11,
+    "author": {
+      "name": "앱개발자",
+      "username": "appdev",
+      "profileImage": "https://picsum.photos/40/40?random=11",
+      "verified": false
+    },
+    "content": "Flutter 신규 위젯 테스트 중인데 너무 재밌어요!",
+    "images": [],
+    "createdAt": "2024-03-14T08:30:00Z",
+    "likes": 49,
+    "retweets": 14,
     "comments": 3,
     "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 12,
+    "author": {
+      "name": "AI연구원",
+      "username": "airesearch",
+      "profileImage": "https://picsum.photos/40/40?random=12",
+      "verified": true
+    },
+    "content": "LLM 파인튜닝 성능이 드디어 안정화됐습니다.",
+    "images": ["https://picsum.photos/500/300?random=7"],
+    "createdAt": "2024-07-02T21:11:00Z",
+    "likes": 83,
+    "retweets": 22,
+    "comments": 9,
+    "isLiked": false,
+    "isRetweeted": true
+  },
+  {
+    "id": 13,
+    "author": {
+      "name": "디자이너K",
+      "username": "designk",
+      "profileImage": "https://picsum.photos/40/40?random=13",
+      "verified": false
+    },
+    "content": "그라디언트 실험해보고 있는데 너무 예쁘게 나옵니다 🌈",
+    "images": ["https://picsum.photos/500/300?random=8"],
+    "createdAt": "2024-02-07T14:22:00Z",
+    "likes": 57,
+    "retweets": 12,
+    "comments": 4,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 14,
+    "author": {
+      "name": "서버구축러",
+      "username": "serverman",
+      "profileImage": "https://picsum.photos/40/40?random=14",
+      "verified": false
+    },
+    "content": "도커 컨테이너 정리하다가 삽질 좀 했습니다 😅",
+    "images": [],
+    "createdAt": "2024-04-12T18:00:00Z",
+    "likes": 25,
+    "retweets": 3,
+    "comments": 1,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 15,
+    "author": {
+      "name": "코딩곰",
+      "username": "codingbear",
+      "profileImage": "https://picsum.photos/40/40?random=15",
+      "verified": true
+    },
+    "content": "오늘은 TDD 연습만 3시간 했습니다!",
+    "images": ["https://picsum.photos/500/300?random=9"],
+    "createdAt": "2024-03-19T19:44:00Z",
+    "likes": 69,
+    "retweets": 18,
+    "comments": 7,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 16,
+    "author": {
+      "name": "프론트짱",
+      "username": "frontboss",
+      "profileImage": "https://picsum.photos/40/40?random=16",
+      "verified": false
+    },
+    "content": "CSS 변수로 테마 스위칭 구현 완료했습니다 ✨",
+    "images": [],
+    "createdAt": "2024-05-29T16:55:00Z",
+    "likes": 41,
+    "retweets": 6,
+    "comments": 3,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 17,
+    "author": {
+      "name": "AI초보",
+      "username": "ainewbie",
+      "profileImage": "https://picsum.photos/40/40?random=17",
+      "verified": false
+    },
+    "content": "Python 데이터 전처리가 가장 난관이네요...",
+    "images": ["https://picsum.photos/500/300?random=10"],
+    "createdAt": "2024-04-01T13:20:00Z",
+    "likes": 22,
+    "retweets": 5,
+    "comments": 0,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 18,
+    "author": {
+      "name": "웹마스터",
+      "username": "webmaster",
+      "profileImage": "https://picsum.photos/40/40?random=18",
+      "verified": true
+    },
+    "content": "오늘은 WebAssembly를 조금 파봤습니다!",
+    "images": [],
+    "createdAt": "2024-05-10T10:11:00Z",
+    "likes": 66,
+    "retweets": 13,
+    "comments": 4,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 19,
+    "author": {
+      "name": "테크리더",
+      "username": "techleader",
+      "profileImage": "https://picsum.photos/40/40?random=19",
+      "verified": true
+    },
+    "content": "팀 코드 리뷰 문화 개선을 위한 아이디어를 정리 중입니다.",
+    "images": ["https://picsum.photos/500/300?random=11"],
+    "createdAt": "2024-06-02T09:12:00Z",
+    "likes": 74,
+    "retweets": 17,
+    "comments": 6,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+  {
+    "id": 20,
+    "author": {
+      "name": "코드조각",
+      "username": "pieceofcode",
+      "profileImage": "https://picsum.photos/40/40?random=20",
+      "verified": false
+    },
+    "content": "오늘도 리팩토링 중… 변수명 다시 짓는 게 제일 어렵네요 😭",
+    "images": [],
+    "createdAt": "2024-01-18T15:00:00Z",
+    "likes": 37,
+    "retweets": 5,
+    "comments": 1,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+
+  {
+    "id": 21,
+    "author": {
+      "name": "웹퍼블리셔",
+      "username": "publisher",
+      "profileImage": "https://picsum.photos/40/40?random=21",
+      "verified": false
+    },
+    "content": "반응형 레이아웃 다시 만들고 있는데 진짜 끝이 없네요.",
+    "images": ["https://picsum.photos/500/300?random=12"],
+    "createdAt": "2024-01-15T10:20:00Z",
+    "likes": 55,
+    "retweets": 12,
+    "comments": 3,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 22,
+    "author": {
+      "name": "테스트장인",
+      "username": "testmaster",
+      "profileImage": "https://picsum.photos/40/40?random=22",
+      "verified": true
+    },
+    "content": "E2E 테스트 자동화 성공! 🎉",
+    "images": [],
+    "createdAt": "2024-07-11T08:17:00Z",
+    "likes": 80,
+    "retweets": 21,
+    "comments": 9,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+  {
+    "id": 23,
+    "author": {
+      "name": "데이터박사",
+      "username": "datadoctor",
+      "profileImage": "https://picsum.photos/40/40?random=23",
+      "verified": false
+    },
+    "content": "SQL 쿼리 튜닝은 진짜 예술입니다.",
+    "images": ["https://picsum.photos/500/300?random=13"],
+    "createdAt": "2024-03-28T18:40:00Z",
+    "likes": 62,
+    "retweets": 14,
+    "comments": 4,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 24,
+    "author": {
+      "name": "디버깅요정",
+      "username": "debugfairy",
+      "profileImage": "https://picsum.photos/40/40?random=24",
+      "verified": false
+    },
+    "content": "버그 하나 잡으려고 세 시간 썼습니다 😇",
+    "images": [],
+    "createdAt": "2024-05-24T07:42:00Z",
+    "likes": 44,
+    "retweets": 6,
+    "comments": 3,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 25,
+    "author": {
+      "name": "알고리즘러",
+      "username": "algomaker",
+      "profileImage": "https://picsum.photos/40/40?random=25",
+      "verified": false
+    },
+    "content": "DP 문제 풀 때마다 머리에 스파크가 튐 ⚡",
+    "images": ["https://picsum.photos/500/300?random=14"],
+    "createdAt": "2024-02-04T13:33:00Z",
+    "likes": 78,
+    "retweets": 16,
+    "comments": 8,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+
+  {
+    "id": 26,
+    "author": {
+      "name": "이모션",
+      "username": "emotiondev",
+      "profileImage": "https://picsum.photos/40/40?random=26",
+      "verified": false
+    },
+    "content": "Emotion CSS-in-JS 다시 써보니 괜찮네요!",
+    "images": [],
+    "createdAt": "2024-03-18T08:20:00Z",
+    "likes": 33,
+    "retweets": 5,
+    "comments": 1,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 27,
+    "author": {
+      "name": "프롬프트러",
+      "username": "promptman",
+      "profileImage": "https://picsum.photos/40/40?random=27",
+      "verified": false
+    },
+    "content": "요즘 LLM 프롬프트 엔지니어링 공부 중입니다.",
+    "images": ["https://picsum.photos/500/300?random=15"],
+    "createdAt": "2024-07-21T16:00:00Z",
+    "likes": 48,
+    "retweets": 10,
+    "comments": 2,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 28,
+    "author": {
+      "name": "애니메이션러",
+      "username": "animator",
+      "profileImage": "https://picsum.photos/40/40?random=28",
+      "verified": true
+    },
+    "content": "GSAP로 애니메이션 만들기 너무 재밌어요!",
+    "images": ["https://picsum.photos/500/300?random=16"],
+    "createdAt": "2024-06-07T14:40:00Z",
+    "likes": 72,
+    "retweets": 18,
+    "comments": 7,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+  {
+    "id": 29,
+    "author": {
+      "name": "아키텍트",
+      "username": "architect",
+      "profileImage": "https://picsum.photos/40/40?random=29",
+      "verified": true
+    },
+    "content": "시스템 아키텍처 재설계 중입니다. 규모가 점점 커져요.",
+    "images": [],
+    "createdAt": "2024-04-29T10:01:00Z",
+    "likes": 40,
+    "retweets": 7,
+    "comments": 2,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 30,
+    "author": {
+      "name": "캡슐화매니아",
+      "username": "oopfan",
+      "profileImage": "https://picsum.photos/40/40?random=30",
+      "verified": false
+    },
+    "content": "OOP 캡슐화 개념은 진짜 중요합니다.",
+    "images": [],
+    "createdAt": "2024-05-12T09:20:00Z",
+    "likes": 36,
+    "retweets": 3,
+    "comments": 1,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+
+  {
+    "id": 31,
+    "author": {
+      "name": "레거시정복자",
+      "username": "legacyhero",
+      "profileImage": "https://picsum.photos/40/40?random=31",
+      "verified": true
+    },
+    "content": "레거시 코드 분석하는 날…",
+    "images": ["https://picsum.photos/500/300?random=17"],
+    "createdAt": "2024-04-18T18:00:00Z",
+    "likes": 53,
+    "retweets": 10,
+    "comments": 6,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+  {
+    "id": 32,
+    "author": {
+      "name": "프레임워크러",
+      "username": "frameworker",
+      "profileImage": "https://picsum.photos/40/40?random=32",
+      "verified": false
+    },
+    "content": "새로운 JS 프레임워크가 또 나왔네요 😅",
+    "images": [],
+    "createdAt": "2024-06-17T13:15:00Z",
+    "likes": 23,
+    "retweets": 3,
+    "comments": 1,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 33,
+    "author": {
+      "name": "모바일러",
+      "username": "mobiledev",
+      "profileImage": "https://picsum.photos/40/40?random=33",
+      "verified": false
+    },
+    "content": "React Native와 Flutter 비교하는 중입니다 🔍",
+    "images": ["https://picsum.photos/500/300?random=18"],
+    "createdAt": "2024-03-09T09:30:00Z",
+    "likes": 64,
+    "retweets": 11,
+    "comments": 4,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+  {
+    "id": 34,
+    "author": {
+      "name": "게임메이커",
+      "username": "gamemaker",
+      "profileImage": "https://picsum.photos/40/40?random=34",
+      "verified": false
+    },
+    "content": "Unity 3D 물리 엔진 너무 흥미롭네요!",
+    "images": [],
+    "createdAt": "2024-02-20T12:40:00Z",
+    "likes": 58,
+    "retweets": 9,
+    "comments": 3,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 35,
+    "author": {
+      "name": "크롬덕후",
+      "username": "chromefan",
+      "profileImage": "https://picsum.photos/40/40?random=35",
+      "verified": false
+    },
+    "content": "DevTools Performance 탭 분석이 요즘 취미입니다.",
+    "images": ["https://picsum.photos/500/300?random=19"],
+    "createdAt": "2024-05-18T10:50:00Z",
+    "likes": 80,
+    "retweets": 15,
+    "comments": 9,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+
+  {
+    "id": 36,
+    "author": {
+      "name": "빌드마스터",
+      "username": "buildmaster",
+      "profileImage": "https://picsum.photos/40/40?random=36",
+      "verified": false
+    },
+    "content": "Webpack과 Vite 비교 중인데 역시 Vite가 빠르네요!",
+    "images": [],
+    "createdAt": "2024-04-03T09:22:00Z",
+    "likes": 48,
+    "retweets": 8,
+    "comments": 2,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 37,
+    "author": {
+      "name": "클라우드러",
+      "username": "cloudman",
+      "profileImage": "https://picsum.photos/40/40?random=37",
+      "verified": true
+    },
+    "content": "AWS S3 정리하고 IAM 권한 재정비한 날.",
+    "images": ["https://picsum.photos/500/300?random=20"],
+    "createdAt": "2024-05-01T15:00:00Z",
+    "likes": 59,
+    "retweets": 12,
+    "comments": 5,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 38,
+    "author": {
+      "name": "코틀린유저",
+      "username": "kotliner",
+      "profileImage": "https://picsum.photos/40/40?random=38",
+      "verified": false
+    },
+    "content": "Kotlin DSL이 점점 익숙해지고 있습니다.",
+    "images": [],
+    "createdAt": "2024-06-15T08:44:00Z",
+    "likes": 33,
+    "retweets": 6,
+    "comments": 1,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 39,
+    "author": {
+      "name": "스위프트고수",
+      "username": "swiftmaster",
+      "profileImage": "https://picsum.photos/40/40?random=39",
+      "verified": true
+    },
+    "content": "SwiftUI 너무 편해서 감탄 중입니다!",
+    "images": ["https://picsum.photos/500/300?random=21"],
+    "createdAt": "2024-01-30T10:12:00Z",
+    "likes": 61,
+    "retweets": 14,
+    "comments": 4,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+  {
+    "id": 40,
+    "author": {
+      "name": "SQL리더",
+      "username": "sqllead",
+      "profileImage": "https://picsum.photos/40/40?random=40",
+      "verified": false
+    },
+    "content": "오늘도 인덱스 튜닝의 세계로…",
+    "images": [],
+    "createdAt": "2024-02-13T17:31:00Z",
+    "likes": 47,
+    "retweets": 5,
+    "comments": 2,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+
+  {
+    "id": 41,
+    "author": {
+      "name": "다크모드광",
+      "username": "darkmodefan",
+      "profileImage": "https://picsum.photos/40/40?random=41",
+      "verified": false
+    },
+    "content": "다크모드 디자인은 언제나 옳습니다.",
+    "images": ["https://picsum.photos/500/300?random=22"],
+    "createdAt": "2024-03-02T13:40:00Z",
+    "likes": 54,
+    "retweets": 11,
+    "comments": 3,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 42,
+    "author": {
+      "name": "성능마니아",
+      "username": "perfman",
+      "profileImage": "https://picsum.photos/40/40?random=42",
+      "verified": true
+    },
+    "content": "Lighthouse 100점 찍기 성공 🤩",
+    "images": [],
+    "createdAt": "2024-06-27T16:21:00Z",
+    "likes": 89,
+    "retweets": 23,
+    "comments": 10,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+  {
+    "id": 43,
+    "author": {
+      "name": "디바운싱러",
+      "username": "debouncer",
+      "profileImage": "https://picsum.photos/40/40?random=43",
+      "verified": false
+    },
+    "content": "Debounce와 Throttle 설명하기 진짜 어렵다…",
+    "images": [],
+    "createdAt": "2024-05-08T10:10:00Z",
+    "likes": 30,
+    "retweets": 5,
+    "comments": 1,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 44,
+    "author": {
+      "name": "테일윈더",
+      "username": "tailwinder",
+      "profileImage": "https://picsum.photos/40/40?random=44",
+      "verified": true
+    },
+    "content": "Tailwind로 리디자인 중인데 생산성이 미쳤습니다 🔥",
+    "images": ["https://picsum.photos/500/300?random=23"],
+    "createdAt": "2024-06-05T09:18:00Z",
+    "likes": 70,
+    "retweets": 18,
+    "comments": 7,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 45,
+    "author": {
+      "name": "프로그래머J",
+      "username": "programj",
+      "profileImage": "https://picsum.photos/40/40?random=45",
+      "verified": false
+    },
+    "content": "테스트 커버리지 90% 돌파 🎉",
+    "images": [],
+    "createdAt": "2024-03-11T17:45:00Z",
+    "likes": 42,
+    "retweets": 9,
+    "comments": 2,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+
+  {
+    "id": 46,
+    "author": {
+      "name": "네트워크광",
+      "username": "netman",
+      "profileImage": "https://picsum.photos/40/40?random=46",
+      "verified": false
+    },
+    "content": "HTTP/3 공부 중인데 생각보다 빠르네요!",
+    "images": ["https://picsum.photos/500/300?random=24"],
+    "createdAt": "2024-04-14T08:22:00Z",
+    "likes": 57,
+    "retweets": 9,
+    "comments": 4,
+    "isLiked": false,
+    "isRetweeted": true
+  },
+  {
+    "id": 47,
+    "author": {
+      "name": "개발고양이",
+      "username": "devcat",
+      "profileImage": "https://picsum.photos/40/40?random=47",
+      "verified": false
+    },
+    "content": "냥이랑 같이 코딩하면 집중이 잘 됩니다 😺",
+    "images": [],
+    "createdAt": "2024-02-18T07:12:00Z",
+    "likes": 85,
+    "retweets": 17,
+    "comments": 6,
+    "isLiked": true,
+    "isRetweeted": false
+  },
+  {
+    "id": 48,
+    "author": {
+      "name": "보안연구자",
+      "username": "securitylab",
+      "profileImage": "https://picsum.photos/40/40?random=48",
+      "verified": true
+    },
+    "content": "XSS 취약점 분석 중인데 꽤 흥미롭네요.",
+    "images": ["https://picsum.photos/500/300?random=25"],
+    "createdAt": "2024-01-29T18:10:00Z",
+    "likes": 63,
+    "retweets": 15,
+    "comments": 5,
+    "isLiked": false,
+    "isRetweeted": false
+  },
+  {
+    "id": 49,
+    "author": {
+      "name": "인디게임러",
+      "username": "indiegamer",
+      "profileImage": "https://picsum.photos/40/40?random=49",
+      "verified": false
+    },
+    "content": "새 게임 프로토타입 만들어보는 중입니다!",
+    "images": ["https://picsum.photos/500/300?random=26"],
+    "createdAt": "2024-06-20T12:22:00Z",
+    "likes": 77,
+    "retweets": 12,
+    "comments": 7,
+    "isLiked": true,
+    "isRetweeted": true
+  },
+  {
+    "id": 50,
+    "author": {
+      "name": "JS수집가",
+      "username": "jscollector",
+      "profileImage": "https://picsum.photos/40/40?random=50",
+      "verified": false
+    },
+    "content": "JS 라이브러리 또 모으는 중 😆",
+    "images": [],
+    "createdAt": "2024-03-25T10:20:00Z",
+    "likes": 55,
+    "retweets": 9,
+    "comments": 3,
+    "isLiked": false,
     "isRetweeted": false
   }
 ]
