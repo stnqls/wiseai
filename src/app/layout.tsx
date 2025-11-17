@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import "../_styles/globals.css";
 
 import type { Metadata } from "next";
@@ -16,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className="h-dvh">
-        <Suspense>
-          <main className="h-full">{children}</main>
-        </Suspense>
+        <main className="h-full">{children}</main>
       </body>
     </html>
   );

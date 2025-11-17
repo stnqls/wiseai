@@ -1,13 +1,12 @@
+import { Suspense } from "react";
 import { pathUrls } from "@/_routes/path";
+import NavLink from "@/_components/NavLink/NavLink";
+import UserProfile from "@/_features/user/components/UserProfile";
+import UserIcon from "@/assets/icons/user.svg";
 import EditIcon from "@/assets/icons/edit-3.svg";
 import HomeIcon from "@/assets/icons/home.svg";
-import NavLink from "@/_components/NavLink/NavLink";
-import { getUserData } from "@/_features/user/apis/getUserData";
-import Image from "next/image";
 
-export default async function Header() {
-  const user = await getUserData();
-
+export default function Header() {
   return (
     <header className="flex flex-col gap-12 justify-between items-start border-r-1 border-r-gray-200 pc:w-180 pb-46 pt-24 px-24">
       <nav className="flex flex-col gap-12 items-center pc:items-start">
@@ -25,13 +24,15 @@ export default async function Header() {
         />
       </nav>
 
-      <Image
-        src={user.profileImage}
-        alt={user.name}
-        width={50}
-        height={56}
-        className="rounded-full overflow-hidden mx-auto"
-      />
+      <Suspense
+        fallback={
+          <div className="w-50 h-56 flex justify-center items-center rounded-full bg-gray-300">
+            <UserIcon className="w-24 h-24" />
+          </div>
+        }
+      >
+        <UserProfile />
+      </Suspense>
     </header>
   );
 }
