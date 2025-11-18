@@ -7,6 +7,7 @@ interface PostStore {
   posts: Post[];
   initPostList: (posts: Post[]) => void;
   addPosts: (posts: Post[]) => void;
+  writePost: (post: Post) => void;
   toggleLike: (postId: number) => Post | null;
   toggleRetweet: (postId: number) => Post | null;
   toggleBookmark: (postId: number) => Post | null;
@@ -27,6 +28,13 @@ export const usePostStore = create<PostStore>()(
       addPosts: (newPosts) => {
         set((state) => ({
           posts: [...state.posts, ...newPosts],
+        }));
+      },
+
+      // 게시물 작성
+      writePost: (post) => {
+        set((state) => ({
+          posts: [post, ...state.posts],
         }));
       },
 
@@ -82,13 +90,6 @@ export const usePostStore = create<PostStore>()(
         return previousPost; // 롤백을 위해 이전 상태 반환
       },
 
-      // 에러 발생 시 이전 상태로 롤백
-      rollbackPost: (post) => {
-        set((state) => ({
-          posts: state.posts.map((p) => (p.id === post.id ? post : p)),
-        }));
-      },
-
       // 북마크 토글
       toggleBookmark: (postId) => {
         const state = get();
@@ -111,6 +112,13 @@ export const usePostStore = create<PostStore>()(
         }));
 
         return previousPost; // 롤백을 위해 이전 상태 반환
+      },
+
+      // 에러 발생 시 이전 상태로 롤백
+      rollbackPost: (post) => {
+        set((state) => ({
+          posts: state.posts.map((p) => (p.id === post.id ? post : p)),
+        }));
       },
     }),
     {
