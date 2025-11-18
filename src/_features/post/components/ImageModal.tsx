@@ -5,7 +5,7 @@ import { useModalStore } from "@/_store/modalStore";
 import Image from "next/image";
 import ChevronLeftIcon from "@/assets/icons/chevron_left.svg";
 import ChevronRightIcon from "@/assets/icons/chevron_right.svg";
-import XIcon from "@/assets/icons/x.svg";
+import Modal from "@/_components/Modal/Modal";
 
 export default function ImageModal() {
   // 이미지 모달
@@ -13,22 +13,16 @@ export default function ImageModal() {
     useModalStore();
   const { imageSizes, isLoading, isError } = useGetImageSize(images);
 
-  if (!isOpen) return null;
   if (isLoading || isError || !imageSizes[imageIndex]) {
     return (
-      <div className="fixed w-full h-full top-0 left-0 flex items-center justify-center">
-        <div className="absolute w-full h-full top-0 left-0 bg-black/80"></div>
+      <Modal isOpen={isOpen} onClose={onClose}>
         <div className="z-10 max-h-[calc(100vh-180px)] max-w-[1200px] w-full h-full bg-gray-200 rounded-12 animate-pulse" />
-      </div>
+      </Modal>
     );
   }
 
   return (
-    <div className="fixed w-full h-full top-0 left-0 flex items-center justify-center">
-      <div className="absolute w-full h-full top-0 left-0 bg-black/80"></div>
-      <button className="absolute top-24 right-24" onClick={onClose}>
-        <XIcon className="w-30 h-30 text-white" />
-      </button>
+    <Modal isOpen={isOpen} onClose={onClose}>
       {imageIndex > 0 ? (
         <button
           className="z-10 hover:bg-white/50 hover:rounded-full mx-12"
@@ -64,6 +58,6 @@ export default function ImageModal() {
       ) : (
         <div className="w-40 h-40"></div>
       )}
-    </div>
+    </Modal>
   );
 }
