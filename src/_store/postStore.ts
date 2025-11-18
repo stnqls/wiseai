@@ -13,7 +13,7 @@ interface PostStore {
   toggleLike: (postId: number) => Post | null;
   toggleRetweet: (postId: number) => Post | null;
   toggleBookmark: (postId: number) => Post | null;
-  rollbackPost: (post: Post) => void;
+  rollbackPost: (previousPost: Post) => void;
 }
 
 export const usePostStore = create<PostStore>()(
@@ -146,9 +146,11 @@ export const usePostStore = create<PostStore>()(
       },
 
       // 에러 발생 시 이전 상태로 롤백
-      rollbackPost: (post) => {
+      rollbackPost: (previousPost) => {
         set((state) => ({
-          posts: state.posts.map((p) => (p.id === post.id ? post : p)),
+          posts: state.posts.map((post) =>
+            post.id === previousPost.id ? previousPost : post
+          ),
         }));
       },
     }),
