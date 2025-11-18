@@ -3,6 +3,9 @@
 import { Post } from "../apis/dtos/getPostList.dto";
 import PostCard from "./PostCard";
 import { useGetPostList } from "../hooks/useGetPostList";
+import { useTogglePostLike } from "../hooks/useTogglePostLike";
+import { useTogglePostRetweet } from "../hooks/useTogglePostRetwet";
+import { useTogglePostBookmark } from "../hooks/useTogglePostBookmark";
 
 export default function PostList({
   postList,
@@ -18,12 +21,22 @@ export default function PostList({
   });
 
   // 좋아요
-  const onToggleLike = () => {};
+  const { onToggleLike } = useTogglePostLike();
+  // 리트윗
+  const { onToggleRetweet } = useTogglePostRetweet();
+  // 북마크
+  const { onToggleBookmark } = useTogglePostBookmark();
 
   return (
     <>
       {posts.map((post) => (
-        <PostCard key={post.id} {...post} onToggleLike={onToggleLike} />
+        <PostCard
+          key={post.id}
+          {...post}
+          onToggleLike={onToggleLike}
+          onToggleRetweet={onToggleRetweet}
+          onToggleBookmark={onToggleBookmark}
+        />
       ))}
 
       {isLoading && (

@@ -9,9 +9,12 @@ import MoreIcon from "@/assets/icons/more.svg";
 import { Post } from "../apis/dtos/getPostList.dto";
 import PostImageList from "./PostImageList";
 import { cn } from "@/_lib/cn";
+import ActionButton from "./ActionButton";
 
 interface PostCardProps extends Post {
-  onToggleLike: () => void;
+  onToggleLike: (postId: number) => void;
+  onToggleRetweet: (postId: number) => void;
+  onToggleBookmark: (postId: number) => void;
 }
 
 export default function PostCard({
@@ -24,6 +27,11 @@ export default function PostCard({
   retweets,
   isLiked,
   isRetweeted,
+  isBookmarked,
+  id,
+  onToggleLike,
+  onToggleRetweet,
+  onToggleBookmark,
 }: PostCardProps) {
   return (
     <div className="flex gap-8 max-w-600 items-start px-16 py-12">
@@ -59,30 +67,44 @@ export default function PostCard({
         {/* 하단 버튼 */}
         <div className="flex items-center ga mt-12 justify-between">
           <div className="flex items-center justify-between flex-2">
-            <div className="flex items-center gap-4 text-12 text-gray-600">
-              <CommentIcon className="w-18 h-18" />
-              {comments}
-            </div>
-            <button className="flex items-center gap-4 text-12 text-gray-600">
-              <RepeatIcon
-                className={cn("w-18 h-18", isRetweeted && "text-blue-500")}
-              />
-              {retweets}
-            </button>
-            <button className="flex items-center gap-4 text-12 text-gray-600">
-              <HeartIcon
-                className={cn(
-                  "w-18 h-18",
-                  isLiked && "fill-red-500 text-red-500"
-                )}
-              />
-              {likes}
-            </button>
+            <ActionButton
+              icon={<CommentIcon className="w-18 h-18" />}
+              text={comments}
+            />
+            <ActionButton
+              icon={
+                <RepeatIcon
+                  className={cn("w-18 h-18", isRetweeted && "text-blue-500")}
+                />
+              }
+              text={retweets}
+              onClick={() => onToggleRetweet(id)}
+            />
+            <ActionButton
+              icon={
+                <HeartIcon
+                  className={cn(
+                    "w-18 h-18",
+                    isLiked && "fill-red-500 text-red-500"
+                  )}
+                />
+              }
+              text={likes}
+              onClick={() => onToggleLike(id)}
+            />
           </div>
 
           <div className="flex items-center gap-4 flex-1 justify-end">
-            <button className="w-34 h-34 flex justify-center items-center rounded-full hover:bg-blue-50 hover:[&>svg]:text-blue-400">
-              <BookmarkIcon className="w-18 h-18 text-gray-600 " />
+            <button
+              onClick={() => onToggleBookmark(id)}
+              className="w-34 h-34 flex justify-center items-center rounded-full hover:bg-blue-50 hover:[&>svg]:text-blue-400"
+            >
+              <BookmarkIcon
+                className={cn(
+                  "w-18 h-18 text-gray-600",
+                  isBookmarked && "fill-blue-500 text-blue-500"
+                )}
+              />
             </button>
             <button className="w-34 h-34 flex justify-center items-center rounded-full hover:bg-blue-50 hover:[&>svg]:text-blue-400">
               <MoreIcon className="w-18 h-18 text-gray-600 " />

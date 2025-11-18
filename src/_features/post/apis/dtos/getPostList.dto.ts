@@ -9,6 +9,7 @@ export interface Post {
   content: string;
   images: string[];
   author: Author;
+  isBookmarked: boolean;
 }
 
 export interface Author {
