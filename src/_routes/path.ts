@@ -2,6 +2,6 @@ export const pathUrls = {
   home: "/",
   compose: "/compose",
 
-  bookmark: "/bookmark",
+  bookmark: "/bookmarked",
   profile: "/profile",
 };

@@ -3,6 +3,7 @@ import NavLink from "@/_components/NavLink/NavLink";
 import UserProfile from "@/_features/user/components/UserProfile";
 import EditIcon from "@/assets/icons/edit-3.svg";
 import HomeIcon from "@/assets/icons/home.svg";
+import BookmarkIcon from "@/assets/icons/bookmark.svg";
 import { getUserData } from "@/_features/user/apis/getUserData";
 
 export default async function Header() {
@@ -41,6 +42,11 @@ export default async function Header() {
             href={pathUrls.compose}
             icon={<EditIcon className="w-24 h-24" />}
             title="Post"
+          />
+          <NavLink
+            href={pathUrls.bookmark}
+            icon={<BookmarkIcon className="w-24 h-24" />}
+            title="Bookmark"
           />
         </nav>
         <UserProfile

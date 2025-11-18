@@ -34,7 +34,7 @@ export default function PostCard({
   onToggleBookmark,
 }: PostCardProps) {
   return (
-    <div className="flex gap-8 max-w-600 items-start px-16 py-12">
+    <div className="flex gap-8 tablet:w-600 items-start px-16 py-12">
       {/* 프로필 이미지 */}
       <UserProfile
         src={author.profileImage}
@@ -62,7 +62,7 @@ export default function PostCard({
         </div>
         {/* 게시물 내용 */}
         <div className="text-16 mb-12 text-gray-950">{content}</div>
-        {images.length > 0 && <PostImageList images={images} />}
+        {images && images.length > 0 && <PostImageList images={images} />}
 
         {/* 하단 버튼 */}
         <div className="flex items-center ga mt-12 justify-between">
