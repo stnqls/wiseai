@@ -3,6 +3,7 @@
 import NextImage from "next/image";
 import MoreIcon from "@/assets/icons/more.svg";
 import { useGetImageSize } from "@/_features/image/hooks/useGetImageSize";
+import { useModalStore } from "@/_store/modalStore";
 
 interface PostImageListProps {
   images: string[];
@@ -10,6 +11,7 @@ interface PostImageListProps {
 
 export default function PostImageList({ images }: PostImageListProps) {
   const { imageSizes, isLoading, isError } = useGetImageSize(images);
+  const { onOpen } = useModalStore();
 
   if (isLoading || isError) {
     return (
@@ -22,10 +24,11 @@ export default function PostImageList({ images }: PostImageListProps) {
 
     return (
       <div
-        className="relative max-h-490 w-full rounded-12 overflow-hidden"
+        className="relative max-h-490 w-full rounded-12 overflow-hidden cursor-pointer"
         style={{
           aspectRatio: aspectRatio,
         }}
+        onClick={() => onOpen({ index: 0, images })}
       >
         <NextImage
           src={images[0]}
@@ -40,7 +43,7 @@ export default function PostImageList({ images }: PostImageListProps) {
 
   if (images.length >= 5) {
     return (
-      <div className="grid grid-cols-2 gap-2 max-h-490 ">
+      <div className="grid grid-cols-2 gap-2 max-h-490 cursor-pointer">
         {images.slice(0, 3).map((image, idx) => {
           const aspectRatio = imageSizes[idx].width / imageSizes[idx].height;
 
@@ -51,6 +54,7 @@ export default function PostImageList({ images }: PostImageListProps) {
               style={{
                 aspectRatio: aspectRatio,
               }}
+              onClick={() => onOpen({ index: idx, images })}
             >
               <NextImage
                 src={image}
@@ -70,7 +74,7 @@ export default function PostImageList({ images }: PostImageListProps) {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-2 max-h-490">
+    <div className="grid grid-cols-2 gap-2 max-h-490 cursor-pointer">
       {images.map((image, idx) => {
         const aspectRatio = imageSizes[idx].width / imageSizes[idx].height;
 
@@ -81,6 +85,7 @@ export default function PostImageList({ images }: PostImageListProps) {
             style={{
               aspectRatio: aspectRatio,
             }}
+            onClick={() => onOpen({ index: idx, images })}
           >
             <NextImage
               src={image}
