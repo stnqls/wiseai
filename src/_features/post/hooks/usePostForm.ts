@@ -6,9 +6,15 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { usePostStore } from "@/_store/postStore";
 import { useCallback } from "react";
+import { useImageAttachment } from "@/_features/image/hooks/useImageAttachment";
+import { useRouter } from "next/navigation";
+import { pathUrls } from "@/_routes/path";
 
 export function usePostForm() {
-  const { writePost } = usePostStore();
+  const router = useRouter();
+
+  // 게시글 작성
+  const { writePost, isWrite } = usePostStore();
 
   const formMethods = useForm<PostRegisterSchema>({
     resolver: zodResolver(postRegisterSchema),
@@ -17,30 +23,43 @@ export function usePostForm() {
       images: [],
     },
   });
+  const { setValue, watch } = formMethods;
 
-  const onSubmit = useCallback(() => {
-    writePost({
-      id: Date.now(),
-      createdAt: new Date().toISOString(),
-      likes: 0,
-      retweets: 0,
-      comments: 0,
-      isLiked: false,
-      isRetweeted: false,
-      isBookmarked: false,
-      author: {
-        name: "Anonymous",
-        username: "anonymous",
-        profileImage: "",
-        verified: false,
-      },
-      content: "",
-      images: [],
-    });
-  }, [writePost]);
+  // 이미지 업로드
+  const { attachedImages, onAttachImage, onRemoveImage } = useImageAttachment({
+    setValue,
+    watch,
+    name: "images",
+  });
+
+  const onSubmit = useCallback(
+    async (data: PostRegisterSchema) => {
+      try {
+        await writePost({
+          content: data.content,
+          // 이미지 업로드api가 따로 없어서 업로드되는 이미지를 임시로 설정
+          // images: data.images?.map((image) => image?.url ?? "") || [],
+          images:
+            data.images && data.images.length > 0
+              ? ["https://picsum.photos/500/300?random=35"]
+              : [],
+        });
+
+        router.push(pathUrls.home);
+      } catch (error) {
+        console.error(error);
+        window.alert("게시글 작성에 실패했습니다.");
+      }
+    },
+    [writePost, router]
+  );
 
   return {
     ...formMethods,
     onSubmit,
+    attachedImages,
+    onAttachImage,
+    onRemoveImage,
+    isWrite,
   };
 }

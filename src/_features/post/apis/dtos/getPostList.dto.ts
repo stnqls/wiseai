@@ -7,7 +7,7 @@ export interface Post {
   isLiked: boolean;
   isRetweeted: boolean;
   content: string;
-  images: string[];
+  images?: string[];
   author: Author;
   isBookmarked: boolean;
 }

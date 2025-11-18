@@ -45,7 +45,7 @@ export function useGetPostList({
   useEffect(() => {
     const storagePostList = storageUtil.getSessionStorage(storageKey.POST_LIST);
     if (!storagePostList) return initPostList(postList);
-    // storage에 데이터가 있는경우 해당 페이지까지 데이터를 맞춰 보여준다.
+    // storage에 데이터가 있는경우 저장된 데이터의 길이가 제한보다 크거나 같은경우 해당 페이지까지 데이터를 맞춰 보여준다.
     if (posts.length >= limit) {
       setPage(Math.floor(posts.length / limit));
     }
