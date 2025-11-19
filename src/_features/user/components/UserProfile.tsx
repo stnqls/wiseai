@@ -4,26 +4,13 @@ import { cn } from "@/_lib/cn";
 interface UserProfileProps {
   src: string;
   alt: string;
-  width: number;
-  height: number;
   className?: string;
 }
 
-export default function UserProfile({
-  src,
-  alt,
-  width,
-  height,
-  className,
-}: UserProfileProps) {
+export default function UserProfile({ src, alt, className }: UserProfileProps) {
   return (
-    <Image
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={cn("rounded-full overflow-hidden mx-auto", className)}
-      sizes="(max-width: 768px) 40px, 50px"
-    />
+    <div className={cn("relative w-full h-full", className)}>
+      <Image src={src} alt={alt} fill sizes="(max-width: 768px) 40px, 50px" />
+    </div>
   );
 }

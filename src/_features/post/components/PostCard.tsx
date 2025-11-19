@@ -39,8 +39,7 @@ export default function PostCard({
       <UserProfile
         src={author.profileImage}
         alt={author.name}
-        width={40}
-        height={40}
+        className="w-40 h-40"
       />
 
       <div className="flex-1">

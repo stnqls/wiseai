@@ -52,9 +52,7 @@ export default async function Header() {
         <UserProfile
           src={user.profileImage}
           alt={user.name}
-          width={50}
-          height={56}
-          className="mx-0"
+          className="mx-0 w-50 h-50"
         />
       </div>
     </header>
