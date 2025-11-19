@@ -54,18 +54,18 @@ export default function ImageAttachment({
         {attachedImages.length > 0 &&
           attachedImages.map((image) => (
             <div
-              key={image.url}
+              key={image?.url}
               className={`
                 rounded-8 relative flex h-135 w-135 items-center justify-center overflow-hidden border-1 border-gray-300 cursor-pointer
                 hover:after:content-['Delete'] hover:after:text-white hover:after:flex hover:after:items-center hover:after:justify-center hover:after:absolute hover:after:top-0 hover:after:right-0 hover:after:w-full hover:after:h-full hover:after:bg-black/50
                 `}
               onClick={() => {
-                onRemoveImage(image.url || "");
+                onRemoveImage(image?.url || "");
                 setKey(() => Date.now());
               }}
             >
               <Image
-                src={image.url || ""}
+                src={image?.url || ""}
                 alt="preview"
                 fill
                 className="object-contain"

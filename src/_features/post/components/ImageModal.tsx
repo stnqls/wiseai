@@ -34,7 +34,7 @@ export default function ImageModal() {
         <div className="w-40 h-40"></div>
       )}
       <div
-        className="relative max-h-[calc(100vh-180px)] max-w-[1200px] w-full h-full z-10"
+        className="relative max-h-[calc(100vh-180px)] max-w-[calc(100vw-120px)] pc:max-w-[1200px] w-full h-full z-10"
         style={{
           aspectRatio:
             imageSizes[imageIndex]?.width / imageSizes[imageIndex]?.height,
@@ -44,7 +44,7 @@ export default function ImageModal() {
           src={images[imageIndex]}
           alt="image"
           fill
-          //   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="(max-width: 768px) calc(100vw-120px), 1200px"
           className="object-contain"
         />
       </div>

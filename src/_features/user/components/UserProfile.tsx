@@ -23,7 +23,7 @@ export default function UserProfile({
       width={width}
       height={height}
       className={cn("rounded-full overflow-hidden mx-auto", className)}
-      sizes="(max-width: 768px) 50px, (max-width: 1024px) 50px, 50px"
+      sizes="(max-width: 768px) 40px, 50px"
     />
   );
 }

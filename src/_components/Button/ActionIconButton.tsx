@@ -4,14 +4,14 @@ import { ComponentProps } from "react";
 interface ActionButtonProps
   extends Omit<ComponentProps<"button">, "className"> {
   icon: React.ReactNode;
-  text: number;
+  text: number | string;
   classNames?: {
     text?: string;
     button?: ComponentProps<"button">["className"];
   };
 }
 
-export default function ActionButton({
+export default function ActionIconButton({
   icon,
   text,
   classNames,

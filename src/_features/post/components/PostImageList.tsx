@@ -35,7 +35,7 @@ export default function PostImageList({ images }: PostImageListProps) {
           alt="post image"
           fill
           className="object-contain"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="(max-width: 768px) 50vw, 520px"
         />
       </div>
     );
@@ -61,7 +61,7 @@ export default function PostImageList({ images }: PostImageListProps) {
                 alt="post image"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                sizes="(max-width: 768px) 50vw, 260px"
               />
             </div>
           );
@@ -92,7 +92,7 @@ export default function PostImageList({ images }: PostImageListProps) {
               alt="post image"
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              sizes="(max-width: 768px) 50vw, 260px"
             />
           </div>
         );

@@ -1,4 +1,4 @@
-import { TextareaHTMLAttributes } from "react";
+import { ComponentProps } from "react";
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/_lib/cn";
 
@@ -13,7 +13,7 @@ const textareaVariants = cva(
 );
 
 interface TextareaProps
-  extends TextareaHTMLAttributes<HTMLTextAreaElement>,
+  extends ComponentProps<"textarea">,
     VariantProps<typeof textareaVariants> {}
 
 export default function Textarea({ className, ...props }: TextareaProps) {

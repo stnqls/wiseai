@@ -9,7 +9,7 @@ import MoreIcon from "@/assets/icons/more.svg";
 import { Post } from "../apis/dtos/getPostList.dto";
 import PostImageList from "./PostImageList";
 import { cn } from "@/_lib/cn";
-import ActionButton from "./ActionButton";
+import ActionIconButton from "../../../_components/Button/ActionIconButton";
 
 interface PostCardProps extends Post {
   onToggleLike: (postId: number) => void;
@@ -67,11 +67,11 @@ export default function PostCard({
         {/* 하단 버튼 */}
         <div className="flex items-center ga mt-12 justify-between">
           <div className="flex items-center justify-between flex-2">
-            <ActionButton
+            <ActionIconButton
               icon={<CommentIcon className="w-18 h-18" />}
               text={comments}
             />
-            <ActionButton
+            <ActionIconButton
               icon={
                 <RepeatIcon
                   className={cn("w-18 h-18", isRetweeted && "text-blue-500")}
@@ -80,7 +80,7 @@ export default function PostCard({
               text={retweets}
               onClick={() => onToggleRetweet(id)}
             />
-            <ActionButton
+            <ActionIconButton
               icon={
                 <HeartIcon
                   className={cn(
